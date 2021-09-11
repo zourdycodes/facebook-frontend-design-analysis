@@ -11,7 +11,7 @@ export default function Home() {
   // if (!session) return <Login />;
 
   return (
-    <div>
+    <div className="h-screen bg-gray-100 overflow-hidden">
       <Head>
         <title>Facebook - Front End Product Design Analysis</title>
         <link rel="icon" href="/favicon.ico" />
