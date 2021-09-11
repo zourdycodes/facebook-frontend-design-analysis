@@ -4,6 +4,8 @@ import { getSession } from 'next-auth/client';
 import { Header } from '../components';
 
 export default function Home() {
+  // if (!session) return <Login />;
+
   return (
     <div>
       <Head>

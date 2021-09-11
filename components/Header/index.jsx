@@ -21,7 +21,11 @@ import {
 
 import { HeaderIcon } from '../HeaderIcon';
 
+const Fakerator = require('fakerator');
+
 export const Header = () => {
+  const fakerator = Fakerator('fr-FR');
+
   return (
     <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
       {/* LEFT SECTION = SEARCH COMPONENT */}
@@ -57,8 +61,18 @@ export const Header = () => {
       {/* RIGHT SECTION = USER EXPERIENCES */}
       <div className="flex items-center sm:space-x-2 justify-end">
         {/* Profile //todo */}
+        <Image
+          src="https://picsum.photos/200/300"
+          width={40}
+          height={40}
+          layout="fixed"
+          alt="profile user"
+          className="rounded-full cursor-pointer"
+        />
 
-        <p className="whitespace-nowrap font-semibold pr-3">Muhammad Zourdy</p>
+        <p className="whitespace-nowrap font-semibold pr-3">
+          {fakerator.names.name()}
+        </p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />

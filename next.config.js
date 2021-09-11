@@ -8,6 +8,7 @@ module.exports = {
       'upload.wikimedia.org',
       'platform-lookaside.fbsbx.com',
       'firebasestorage.googleapis.com',
+      'picsum.photos',
     ],
   },
   env: {
