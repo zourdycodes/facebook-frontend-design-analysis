@@ -21,11 +21,7 @@ import {
 
 import { HeaderIcon } from '../HeaderIcon';
 
-const Fakerator = require('fakerator');
-
-export const Header = () => {
-  const fakerator = Fakerator('fr-FR');
-
+export const Header = ({ name }) => {
   return (
     <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
       {/* LEFT SECTION = SEARCH COMPONENT */}
@@ -70,9 +66,7 @@ export const Header = () => {
           className="rounded-full cursor-pointer"
         />
 
-        <p className="whitespace-nowrap font-semibold pr-3">
-          {fakerator.names.name()}
-        </p>
+        <p className="whitespace-nowrap font-semibold pr-3">{name}</p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />

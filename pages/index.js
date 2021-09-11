@@ -1,9 +1,13 @@
 import Head from 'next/head';
 import { getSession } from 'next-auth/client';
 
-import { Header } from '../components';
+import { Header, Sidebar } from '../components';
+
+const fakerator = require('fakerator')('pl-PL');
 
 export default function Home() {
+  const name = fakerator.names.name();
+
   // if (!session) return <Login />;
 
   return (
@@ -13,10 +17,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header name={name} />
 
-      <main>
+      <main className="flex">
         {/* SIDEBAR */}
+        <Sidebar name={name} />
         {/* FEED */}
         {/* WIDGETS = everything about pitch product or business logic */}
       </main>
