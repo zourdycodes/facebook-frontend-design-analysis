@@ -38,7 +38,7 @@ export const Header = () => {
           <input
             type="text"
             placeholder="Search Facebook"
-            className="bg-transparent flex ml-2 items-center outline-none placeholder-gray-500 flex-shrink"
+            className="hidden md:inline-flex bg-transparent ml-2 items-center outline-none placeholder-gray-500 flex-shrink"
           />
         </div>
       </div>
@@ -46,7 +46,7 @@ export const Header = () => {
       {/* CENTER SECTION = ICON AND NAVIGATION */}
       <div className="flex justify-center flex-grow">
         <div className="flex space-x-6 md:space-x-2">
-          <HeaderIcon Icon={HomeIcon} />
+          <HeaderIcon Icon={HomeIcon} active />
           <HeaderIcon Icon={FlagIcon} />
           <HeaderIcon Icon={PlayIcon} />
           <HeaderIcon Icon={ShoppingCartIcon} />
@@ -55,6 +55,15 @@ export const Header = () => {
       </div>
 
       {/* RIGHT SECTION = USER EXPERIENCES */}
+      <div className="flex items-center sm:space-x-2 justify-end">
+        {/* Profile //todo */}
+
+        <p className="whitespace-nowrap font-semibold pr-3">Muhammad Zourdy</p>
+        <ViewGridIcon className="icon" />
+        <ChatIcon className="icon" />
+        <BellIcon className="icon" />
+        <ChevronDownIcon className="icon" />
+      </div>
     </div>
   );
 };
