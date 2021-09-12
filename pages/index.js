@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getSession } from 'next-auth/client';
 
-import { Header, Sidebar } from '../components';
+import { Header, Sidebar, Feed } from '../components';
 
 const fakerator = require('fakerator')('pl-PL');
 
@@ -21,7 +21,10 @@ export default function Home() {
       <main className="flex">
         {/* SIDEBAR */}
         <Sidebar name={name} />
+
         {/* FEED */}
+        <Feed />
+
         {/* WIDGETS = everything about pitch product or business logic */}
       </main>
     </div>
