@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import axios from 'axios';
 
 import { PostCard } from '../PostCard';
@@ -7,6 +7,9 @@ export const Posts = () => {
   const [postData, setPostData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [index, setIndex] = useState(10);
+
+  // TODO: calculate the innerHeight and scrollY of this container component
+  const containerRef = useRef(null);
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
@@ -38,7 +41,7 @@ export const Posts = () => {
     const events = window.addEventListener('scroll', () => {
       if (
         !isLoading &&
-        window.innerHeight + window.scrollY >= document.body.scrollHeight - 20
+        window.innerHeight + window.scrollY >= document.body.scrollHeight - 10
       ) {
         // eslint-disable-next-line
         setIndex((prevIndex) => {
@@ -55,7 +58,7 @@ export const Posts = () => {
   }, []);
 
   return (
-    <div>
+    <div ref={containerRef}>
       {postData.map((post) => {
         const {
           id,

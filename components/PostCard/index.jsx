@@ -5,11 +5,11 @@ import { ChatAltIcon, ShareIcon, ThumbUpIcon } from '@heroicons/react/outline';
 export const PostCard = ({
   image,
   userProfile,
-  // likes,
   name,
   tags,
   message,
   timestamp,
+  // likes,
 }) => {
   return (
     <div className="flex flex-col">

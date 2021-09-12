@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getSession } from 'next-auth/client';
 
-import { Header, Sidebar, Feed } from '../components';
+import { Header, Sidebar, Feed, Widgets } from '../components';
 
 const fakerator = require('fakerator')('pl-PL');
 
@@ -25,6 +25,7 @@ export default function Home() {
         <Feed />
 
         {/* WIDGETS = everything about pitch product or business logic */}
+        <Widgets />
       </main>
     </div>
   );
