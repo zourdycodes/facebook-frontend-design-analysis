@@ -7,7 +7,6 @@ const fakerator = require('fakerator')('pl-PL');
 
 export default function Home() {
   const name = fakerator.names.name();
-  // if (!session) return <Login />;
 
   return (
     <div className="h-screen bg-gray-100 overflow-hidden">
