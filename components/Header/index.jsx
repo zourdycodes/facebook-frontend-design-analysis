@@ -33,8 +33,8 @@ export const Header = ({ name }) => {
           layout="fixed"
           alt="facebook logo preview"
         />
-        <div className="flex items-center ml-2 rounded-full bg-gray-100 p-2">
-          <SearchIcon className="h-5 text-gray-600" />
+        <div className="hidden md:inline-flex items-center ml-2 rounded-full bg-gray-100 p-2">
+          <SearchIcon className="h-6 text-gray-600" />
           <input
             type="text"
             placeholder="Search Facebook"
@@ -66,7 +66,9 @@ export const Header = ({ name }) => {
           className="rounded-full cursor-pointer"
         />
 
-        <p className="whitespace-nowrap font-semibold pr-3">{name}</p>
+        <p className="hidden lg:inline-flex text-sm whitespace-nowrap font-semibold pr-3">
+          {name}
+        </p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />
