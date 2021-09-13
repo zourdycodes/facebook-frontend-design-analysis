@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { ChatAltIcon, ShareIcon, ThumbUpIcon } from '@heroicons/react/outline';
+import { uuid } from 'uuidv4';
 
 export const PostCard = ({
   image,
@@ -39,10 +40,10 @@ export const PostCard = ({
 
         <div className="flex items-center space-x-3 mt-4 mb-4">
           {tags &&
-            tags.map((tag, index) => {
+            tags.map((tag) => {
               return (
                 <p
-                  key={index}
+                  key={uuid}
                   className="bg-gray-700 rounded-xl px-2 text-white py-[3px]"
                 >
                   {tag}

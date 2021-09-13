@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useCallback, useState } from 'react';
 import axios from 'axios';
@@ -56,13 +57,12 @@ export const Widgets = () => {
       ) : (
         contacts.map((person) => {
           const {
-            id,
             owner: { firstName, lastName, picture },
           } = person;
 
           return (
             <Contact
-              key={id}
+              key={new Date().getTime().toLocaleString()}
               username={`${firstName} ${lastName ?? ''}`}
               profileImage={picture}
             />
